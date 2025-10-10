@@ -1,5 +1,3 @@
-"""${message}"""
-
 revision = ${repr(revision)}
 down_revision = ${repr(down_revision)}
 branch_labels = ${repr(branch_labels)}
