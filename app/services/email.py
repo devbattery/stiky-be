@@ -23,7 +23,7 @@ class ResendClient:
             payload["template_id"] = settings.mail.otp_template_id
             payload["data"] = {"code": code, "expires_in": expires_in_minutes}
         else:
-            payload["html"] = f"<p>인증 코드: <strong>{code}</strong>.</p>"
+            payload["html"] = f"<p>인증 코드: <strong>{code}</strong></p>"
 
         headers = {
             "Authorization": f"Bearer {self.api_key}",
