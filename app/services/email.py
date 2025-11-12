@@ -16,8 +16,8 @@ class ResendClient:
         payload: dict[str, Any] = {
             "from": settings.mail.from_email,
             "to": [email],
-            "subject": "인증 코드",
-            "text": f"인증 코드는 {code}입니다. {expires_in_minutes} 분 남았습니다.",
+            "subject": "[Stiky] 로그인 인증 코드를 보내 드립니다.",
+            "text": f"인증 코드: {code}. {expires_in_minutes} 분 남았습니다.",
         }
         if settings.mail.otp_template_id:
             payload["template_id"] = settings.mail.otp_template_id
