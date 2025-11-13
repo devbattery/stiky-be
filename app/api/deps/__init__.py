@@ -71,6 +71,7 @@ async def get_current_user_optional(
 
 async def set_auth_cookies(response: Response, access_token: str, refresh_token: str) -> None:
     cookie_domain = settings.security.cookie_domain
+    cookie_domain = cookie_domain if cookie_domain else None
     secure = settings.security.secure_cookies
     same_site = settings.security.same_site
     response.set_cookie(
